@@ -1,0 +1,180 @@
+{
+  "version": "36.0.0",
+  "artifacts": {
+    "assembly-cicd-v3-pipeline-new-test": {
+      "type": "cdk:cloud-assembly",
+      "properties": {
+        "directoryName": "assembly-cicd-v3-pipeline-new-test",
+        "displayName": "cicd-v3-pipeline-new/test"
+      }
+    },
+    "cicd-v3-pipeline-new.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "cicd-v3-pipeline-new.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "cicd-v3-pipeline-new": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://264852106485/ap-south-1",
+      "properties": {
+        "templateFile": "cicd-v3-pipeline-new.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::264852106485:role/cdk-hnb659fds-deploy-role-264852106485-ap-south-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::264852106485:role/cdk-hnb659fds-cfn-exec-role-264852106485-ap-south-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-264852106485-ap-south-1/0b2eea31705f6f95da2ed3282d97c170b88127050a710e87d95c518aafe1ad67.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "cicd-v3-pipeline-new.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::264852106485:role/cdk-hnb659fds-lookup-role-264852106485-ap-south-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "cicd-v3-pipeline-new.assets"
+      ],
+      "metadata": {
+        "/cicd-v3-pipeline-new/Pipeline/Pipeline/ArtifactsBucketEncryptionKey/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineArtifactsBucketEncryptionKeyF5BF0670"
+          }
+        ],
+        "/cicd-v3-pipeline-new/Pipeline/Pipeline/ArtifactsBucketEncryptionKeyAlias/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineArtifactsBucketEncryptionKeyAlias94A07392"
+          }
+        ],
+        "/cicd-v3-pipeline-new/Pipeline/Pipeline/ArtifactsBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineArtifactsBucketAEA9A052"
+          }
+        ],
+        "/cicd-v3-pipeline-new/Pipeline/Pipeline/ArtifactsBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineArtifactsBucketPolicyF53CCC52"
+          }
+        ],
+        "/cicd-v3-pipeline-new/Pipeline/Pipeline/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineRoleB27FAA37"
+          }
+        ],
+        "/cicd-v3-pipeline-new/Pipeline/Pipeline/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineRoleDefaultPolicy7BDC1ABB"
+          }
+        ],
+        "/cicd-v3-pipeline-new/Pipeline/Pipeline/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Pipeline9850B417"
+          }
+        ],
+        "/cicd-v3-pipeline-new/Pipeline/Pipeline/Source/ankitanagarale_cdk-test-pipeline/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineSourceankitanagaralecdktestpipelineCodePipelineActionRole1F9B0D0D"
+          }
+        ],
+        "/cicd-v3-pipeline-new/Pipeline/Pipeline/Source/ankitanagarale_cdk-test-pipeline/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineSourceankitanagaralecdktestpipelineCodePipelineActionRoleDefaultPolicy7D3C3677"
+          }
+        ],
+        "/cicd-v3-pipeline-new/Pipeline/Pipeline/Build/Build/CdkBuildProject/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBuildCdkBuildProjectRole4294DC67"
+          }
+        ],
+        "/cicd-v3-pipeline-new/Pipeline/Pipeline/Build/Build/CdkBuildProject/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBuildCdkBuildProjectRoleDefaultPolicyF7F690BF"
+          }
+        ],
+        "/cicd-v3-pipeline-new/Pipeline/Pipeline/Build/Build/CdkBuildProject/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineBuildCdkBuildProject95AAA5D6"
+          }
+        ],
+        "/cicd-v3-pipeline-new/Pipeline/Pipeline/test/Deploy_Application/Deploy Application/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelinetestDeployApplicationDeployApplicationF8385798"
+          }
+        ],
+        "/cicd-v3-pipeline-new/Pipeline/CodeBuildActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineCodeBuildActionRole226DB0CB"
+          }
+        ],
+        "/cicd-v3-pipeline-new/Pipeline/CodeBuildActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipelineCodeBuildActionRoleDefaultPolicy1D62A6FE"
+          }
+        ],
+        "/cicd-v3-pipeline-new/TestRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TestRole6C9272DF"
+          }
+        ],
+        "/cicd-v3-pipeline-new/TestRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TestRoleDefaultPolicyD1C92014"
+          }
+        ],
+        "/cicd-v3-pipeline-new/RepositoryName": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RepositoryName"
+          }
+        ],
+        "/cicd-v3-pipeline-new/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/cicd-v3-pipeline-new/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/cicd-v3-pipeline-new/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "cicd-v3-pipeline-new"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}

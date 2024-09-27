@@ -1,0 +1,84 @@
+{
+  "version": "36.0.0",
+  "artifacts": {
+    "cicdv3pipelinenewtestcrossteest68016171837.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "cicdv3pipelinenewtestcrossteest68016171837.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "cicdv3pipelinenewtestcrossteest68016171837": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://954503069243/ap-south-1",
+      "properties": {
+        "templateFile": "cicdv3pipelinenewtestcrossteest68016171837.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": true,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::954503069243:role/cdk-hnb659fds-deploy-role-954503069243-ap-south-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::954503069243:role/cdk-hnb659fds-cfn-exec-role-954503069243-ap-south-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-954503069243-ap-south-1/7078b2e3c3e290ea28d70f068f30a3b7331ee0ec450a71e7c33ad31164c46ae8.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "cicdv3pipelinenewtestcrossteest68016171837.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::954503069243:role/cdk-hnb659fds-lookup-role-954503069243-ap-south-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        },
+        "stackName": "test-cross-teest-680"
+      },
+      "dependencies": [
+        "cicdv3pipelinenewtestcrossteest68016171837.assets"
+      ],
+      "metadata": {
+        "/cicd-v3-pipeline-new/test/cross-teest-680/CodePipelineBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CodePipelineBucket4803009A"
+          }
+        ],
+        "/cicd-v3-pipeline-new/test/cross-teest-680/CodeDeployRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CodeDeployRole12BEECBE"
+          }
+        ],
+        "/cicd-v3-pipeline-new/test/cross-teest-680/CodeDeployApplication/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CodeDeployApplicationE587C27C"
+          }
+        ],
+        "/cicd-v3-pipeline-new/test/cross-teest-680/DeploymentGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DeploymentGroup6D277AF0"
+          }
+        ],
+        "/cicd-v3-pipeline-new/test/cross-teest-680/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/cicd-v3-pipeline-new/test/cross-teest-680/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/cicd-v3-pipeline-new/test/cross-teest-680/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "cicd-v3-pipeline-new/test/cross-teest-680"
+    }
+  }
+}
